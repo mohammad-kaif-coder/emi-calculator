@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="form box">
+          <p>Loan amount ($)</p>
+          <input
+            type="number"
+            placeholder="Enter loan amount"
+            id="amount"
+            min="10000"
+            max="100000000"
+            maxlength="8"
+            required
+            class="input"
+          />
+          <p>interest rate (%)</p>
+          <input
+            type="number"
+            placeholder="Enter interest rate"
+            id="interest"
+            min="1"
+            max="99"
+            maxlength="8"
+            required
+            step="0.01"
+            class="input"
+          />
+          <p>loan tenure(yr/mo)</p>
+          <input
+            type="number"
+            placeholder="Enter loan duration"
+            id="loantenure"
+            min="1"
+            max="360"
+            maxlength="3"
+            required
+            step="0.01"
+            class="input"
+          />
+          <div class="tenure">
+            <input type="radio" name="btn" id="year" checked />
+            <label for="year">yearly</label>
+            <input type="radio" name="btn" id="month" checked />
+            <label for="month">month</label>
+          </div>
+          <button class="calculate" id="calculate">calculate</button>
+        </div>
+        <div class="box output">
+          <p>EMI</p>
+          <div id="emi"></div>
+          <p>total interest</p>
+          <div id="totalInterest"></div>
+          <p>total payment</p>
+          <div id="totalPayment"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  </body>
+  
+</html>
